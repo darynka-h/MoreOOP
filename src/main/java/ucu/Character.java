@@ -1,8 +1,8 @@
 package ucu;
 
 public abstract class Character {
-    protected int power;
-    protected int hp;
+    private int power;
+    private int hp;
     
     public int getPower() {
         return this.power;

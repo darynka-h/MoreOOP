@@ -2,21 +2,22 @@ package ucu;
 public class Elf extends Character {
      
     public Elf() {
-        power = 10;
-        hp = 10;
+        setPower(10);
+        setHp(10);
     }
 
+
     public void kick (Character c) {
-        if (c.power < this.power){
-            c.hp = 0;
+        if (c.getPower() < this.getPower()){
+            c.setHp(0);
         }
         else{
-            c.power--;
+            c.setPower(c.getPower() -1);
         }
     }
     
     @Override
     public String toString() {
-        return "Elf{hp=" + hp + ", power=" + power + "}";
+        return "Elf{hp=" + getHp() + ", power=" + getPower() + "}";
     }
 }

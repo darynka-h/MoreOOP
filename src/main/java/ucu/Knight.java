@@ -8,28 +8,30 @@ public class Knight extends King{
         Random rand = new Random();
 
         int rand_power = rand.nextInt(2, 12);
-        power = rand_power;
+        setPower(rand_power);
         int rand_hp = rand.nextInt(2, 12);
-        hp = rand_hp;
+        setHp(rand_hp);
     }
 
-    public void setPower(int power) {
-        if (power < 2 || power > 12) {
-            throw new IllegalArgumentException("power must be in range 2 and 12.");
-        }
-        else{
-            this.power = power;
-        };
-    }
+    
 
-    public void setHp(int power) {
-        if (power < 2 || power > 12) {
-            throw new IllegalArgumentException("hp must be in range 2 and 12.");
-        }
-        else{
-            this.hp = hp;
-        };
-    }
+    // public void setPower(int power) {
+    //     if (getPower() < 2 || getPower() > 12) {
+    //         throw new IllegalArgumentException("power must be in range 2 and 12.");
+    //     }
+    //     else{
+    //         setPower(power);
+    //     };
+    // }
+
+    // public void setHp(int power) {
+    //     if (getHp() < 2 || getHp() > 12) {
+    //         throw new IllegalArgumentException("hp must be in range 2 and 12.");
+    //     }
+    //     else{
+    //         this.hp = hp;
+    //     };
+    // }
 
     // methods: void kick(Character c) { decrease number of hp of the enemy 
     //     by random number which will be in the range of his power }
