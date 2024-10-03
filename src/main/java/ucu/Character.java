@@ -16,8 +16,17 @@ public abstract class Character {
         return this.hp;
     }
 
+    // public void setHp(int hp) {
+    //     this.hp = hp;
+    // }
     public void setHp(int hp) {
-        this.hp = hp;
+        if (hp < 0 ) {
+            this.hp = 0;
+        }
+        else{
+            this.hp = hp;
+        };
+        
     }
 
     public boolean isAlive(){
