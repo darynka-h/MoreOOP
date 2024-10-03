@@ -1,7 +1,7 @@
 package ucu;
 public class Hobbit {
     protected int power = 0;
-    protected int hp = 0;
+    protected int hp = 3;
     
     public int getPower() {
         return this.power;
@@ -16,7 +16,13 @@ public class Hobbit {
     }
 
     public void setHp(int hp) {
-        this.hp = hp;
+        if (hp < 0 ) {
+            this.hp = 0;
+        }
+        else{
+            this.hp = hp;
+        };
+    
     }
 
     public static void toCry(){
@@ -26,4 +32,9 @@ public class Hobbit {
     public void kick(Character c) {  
         toCry();
     };
+
+    @Override
+    public String toString() {
+        return "Hobbit{hp=" + hp + ", power=" + power + "}";
+    }
 }
